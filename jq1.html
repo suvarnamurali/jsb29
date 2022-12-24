@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> jQ1 </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <style>
+        div
+        {
+            margin: 20px;
+            width: 500px;
+            height: 100px;
+            /* display: none; */     
+            
+            /* display none for fade in and position absolute comment */
+
+        }
+        #div1{
+            background-color: blue; 
+            border: 1px solid white;
+            position: absolute;
+        }
+        #div2{
+            background-color: red; 
+            border: 1px solid white;
+            display: none;
+            bottom: 0;
+        }
+        #div3{
+            background-color: green; 
+            border: 1px solid white;
+            display: none;
+            bottom: 0;
+        }
+        #div4{
+            background-color: black; 
+            border: 1px solid white;
+            /* display: none; */
+            bottom: 0;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <p class="xyz">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam pariatur,
+        consequatur minus vel ipsam possimus quaerat dolor necessitatibus iure praesentium. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Dolores cumque veritatis blanditiis, harum sapiente amet alias architecto
+        voluptatem
+        minima aut est odio dolorum voluptatum eos quo vitae enim delectus quaerat debitis fugiat sit neque numquam?
+        Sequi
+        laboriosam reiciendis qui facere exercitationem beatae, commodi voluptas nulla quaerat et mollitia ratione
+        corrupti?
+    </p>
+
+    <p>
+    <div class="abc">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores assumenda praesentium vero libero eum voluptas
+        ut beatae saepe modi magni. Commodi nam quam voluptatibus, fugiat dolores quisquam possimus explicabo doloremque
+        numquam non quas enim repellendus necessitatibus rerum ipsum voluptatum fugit voluptatem sint ut beatae
+        assumenda. Voluptates, fuga amet. Error officia explicabo nam ratione fugit aliquam quos eius, eligendi animi
+        adipisci nisi voluptate excepturi asperiores iste pariatur sit maiores odio suscipit quo eaque consectetur!
+        Facilis ducimus incidunt praesentium dignissimos.
+
+    </div>
+    </p> -->
+
+
+    <!-- <form action="">
+        <br>
+        <label for="">User name : </label>
+        <input type="text" placeholder="Enter username"> <br><br>
+        <label for="">Password :</label>
+        <input type="text" placeholder="Enter password"> <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <br><br><br>
+     <p class="pq">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit corrupti quas doloribus quam ipsa accusamus, 
+        illo dolorum non molestiae, perspiciatis modi recusandae. Excepturi omnis reprehenderit nemo iure a. Eos qui est
+         reprehenderit asperiores laudantium porro, eveniet aspernatur facere nisi quis?
+    </p><br>
+    <button id="hi" type="button">Hide</button> <br><br><br>
+    <button id="sh" type="button">Show</button> <br><br><br>
+    <button id="tg" type="button">Toggle</button> -->
+
+
+    <button id="fi" type="button">FadeIn</button> 
+    <button id="fo" type="button">FadeOut</button>
+    <button id="ft" type="button">FadeToggle</button> 
+    <button id="fto" type="button">FadeTo</button>
+    <button id="sd" type="button">Slide</button>
+    <button id="an" type="button">Animate</button>
+
+
+    <div id="div1">
+    </div> <br><br>
+    <div id="div2">
+    </div><br><br>
+    <div id="div3">
+    </div><br><br>
+    <div id="div4">
+    </div> <br><br>
+
+<script>
+        // $(document).ready(function()
+        // {
+        //     $('.xyz').css('background-color','red')
+        // })
+
+        // $(document).ready(function () {
+        // $('.abc').css('color','blue')
+        // $('.abc').css('background-color','yellow')
+        // $('.xyz').click(function () {
+        // $(this).hide()
+        //         $('.abc').css('border', '1px solid black')
+        //         $('.abc').css('color', 'blue')
+        //         $('.abc').css('background-color', 'yellow')
+        //     })
+        //     $('.abc').dblclick(function () {
+        //         $('.xyz').css('color', 'blue')
+        //     })
+        // })
+
+        // $(document).ready(function (){
+        //     $("form").submit(function(){
+        //         alert('Successfully submitted')
+        //     })
+        //     $('#hi').click(function(){
+        //         $('.pq').hide()
+        //     });
+        //     $('#sh').click(function(){
+        //         $('.pq').show()
+        //     });
+        //     $('#tg').click(function(){
+        //         $('.pq').toggle()
+        //     });
+           
+        // })
+
+        // $(document).ready(function (){           
+        //     $('#fi').click(function(){
+        //         $('#div1').fadeIn() ;    
+        //         $('#div2').fadeIn('slow') ;    
+        //         $('#div3').fadeIn('fast') ;    
+        //         $('#div4').fadeIn(2000) ;   
+        //     });           
+        // })
+
+        // $(document).ready(function (){           
+        //     $('#fi').click(function(){
+        //         $('#div1').delay('slow').fadeIn() ;    
+        //         $('#div2').delay('slow').fadeIn() ;    
+        //         $('#div3').delay('slow').fadeIn() ;    
+        //         $('#div4').delay('slow').fadeIn() ;   
+        //     });           
+        // })
+
+        // $(document).ready(function (){           
+        //     $('#fo').click(function(){
+        //         $('#div1').fadeOut() ;    
+        //         $('#div2').fadeOut('slow') ;    
+        //         $('#div3').fadeOut('fast') ;    
+        //         $('#div4').fadeOut(2000) ;   
+        //     });           
+        // })
+
+        // $(document).ready(function (){           
+        //     $('#ft').click(function(){
+        //         $('#div1').fadeToggle() ;    
+        //         $('#div2').fadeToggle('slow') ;    
+        //         $('#div3').fadeToggle('fast') ;    
+        //         $('#div4').fadeToggle('2000') ;   
+        //     });           
+        // })
+
+        // $(document).ready(function (){           
+        //     $('#fto').click(function(){
+        //         $('#div1').fadeTo('slow',0.5) ;    
+        //         $('#div2').fadeTo('slow',0.2) ;    
+        //         $('#div3').fadeTo('slow',0.15) ;    
+        //         $('#div4').fadeTo('slow',0.02) ;   
+        //     });           
+        // })
+
+        // $(document).ready(function (){           
+        //     $('#sd').click(function(){
+        //         $('#div2').slideDown('slow') ;  
+        //         $('#div1').slideUp('slow') ;  
+        //         $('#div4').slideToggle('slow') ;  
+
+        //     });           
+        // })
+
+        
+        $(document).ready(function (){           
+            $('#an').click(function(){
+                $('#div1').animate({
+                    'left':'300px'
+                    
+                }).delay().animate({
+                    'top': '200px'
+                }).delay().animate({
+                    'bottom': '200px'
+                })
+                
+                $('#div4').animate({
+                    'left':'500px'
+                });
+              
+            });           
+        })
+
+    </script>
+
+</body>
+
+</html>

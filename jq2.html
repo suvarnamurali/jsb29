@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> jQuery </title>
+    <!-- <script src="{% static 'javascript/jquery-3.6.1.min.js' %}"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        .div0 {
+            background-color: rebeccapurple;
+            border: 1px solid burlywood;
+            height: 250px;
+        }
+
+        .qwe {
+            background-color: red;
+            border: 1px solid wheat;
+        }
+
+        .div4 {
+            background-color: greenyellow;
+            border: green;
+            height: 500px;
+            width: 500px;
+            padding: 50px;
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+
+    <p id="p1"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam reiciendis praesentium voluptates
+        <b>Haiii...</b> quia vitae vero consequatur provident fugit nam magnam ducimus possimus quas, repudiandae ad
+        iusto in deserunt repellendus est maxime tenetur! Rerum aperiam animi quidem nostrum reiciendis, quaerat
+        necessitatibus!
+    </p>
+
+    <button id="b1" type="button"> Show Text </button>
+    <button id="b2" type="button"> Show HTML </button> <br><br>
+
+    <input type="text" id="in1" value="">
+    <button type="button" id="b3">Show text</button> <br><br>
+
+    <p id="p2">Lorem, ipsum dolor sit amet <b> helloooo.... </b> consectetur adipisicing elit. Accusantium repudiandae
+        dolorem quia enim,
+        nulla consequuntur consectetur expedita molestias. Veniam molestias quidem esse nesciunt, quam tenetur
+        reprehenderit ad modi mollitia est nostrum eos? Ad maiores vero iste quasi nesciunt magni soluta eius,
+        delectus sint sit adipisci. Molestiae dolore eos ea quod. <br><br>
+    </p>
+
+    <button id="b4" type="button"> Set Html </button>
+    <button id="b5" type="button"> Set Text </button>
+    <button id="b6" type="button"> Set value </button>
+    <input type="text" id="in2">
+
+    <button id="b7" type="button">Set by Calling Fn</button> <br><br>
+
+    <div class="div0">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum cupiditate dignissimos maiores
+            illum officia beatae aperiam nobis corrupti, praesentium perferendis?</p>
+
+        <b>hello</b>
+        <h2>gdhxfhf</h2>
+        <p>gzdnjhfxnfrgdhzd Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, dolorem.</p>
+    </div>
+
+    <button id="rem" type="button">Remove</button>
+    <button id="emt" type="button">Empty</button>
+
+    <div class="div2">
+
+        <h1>hello world</h1>
+        
+
+        <h2>test</h2>
+        <p>hellooooooooooooooooooooo ipsum dolor sit amet, consectetur adipisicing elit. Cum cupiditate dignissimos maiores
+            illum officia beatae aperiam nobis corrupti, praesentium perferendis?</p>
+
+        <b>hello</b>
+        
+        <p>gzdnjhfxnfrgdhzd Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, dolorem.</p>
+    </div> <br>
+    <button id="b9" type="button">Class</button>
+
+
+
+    <div class="div4">
+        <p>
+            welcome 
+
+            ipsum dolor sit amet consectetur adipisicing elit. Quos ipsum est doloremque velit itaque magni iusto
+            et,
+            architecto repellat assumenda eligendi consectetur nisi hic, aut similique tempora voluptatum illum corporis
+            qui
+            libero laborum? Nostrum voluptatem ratione aspernatur animi minus deleniti omnis optio earum et blanditiis?
+            Id,
+            repellendus. Sequi, possimus laudantium.
+        </p>
+    </div>
+
+    <button id="b10" type="button">Dimension</button>
+
+
+
+    <p id="p8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, iste? Temporibus, ipsum? Consequatur,
+        placeat culpa ad quod dolorem obcaecati dolore.
+
+        <span>astrophysics</span>
+
+    </p>
+
+
+
+    <!-- Every jQuery selector start with thiis sign $(). This sign is known as the factory function. -->
+
+    <script>
+
+        //getcontent or return content.....html,text,value
+
+        $(document).ready(function () {
+
+            $('#b2').click(function () {
+
+                alert($('#p1').html())
+            })
+            $('#b1').click(function () {
+
+                alert($('#p1').text())
+            })
+            $('#b3').click(function () {
+
+                alert($('#in1').val())
+            })
+            
+            
+
+            // setcontent
+
+            $('#b4').click(function () {
+
+                ($('#p2').html('Hello <b> helloooooooooooohhhgffddfddffd </b>gbfg'))
+
+            })
+
+            $('#b5').click(function () {
+
+                ($('#p2').text('<b>Hello Cybersquare................</b>'))
+
+            })
+
+            $('#b6').click(function () {
+
+                ($('#in2').val('singularity'))
+            })
+
+            $('#b7').click(function () {
+
+                // b - id .value(p2)
+
+                // doubt 
+
+                // ($('#p2').text(function (a, b) {
+                //     return '***'+ b + '****'  + "new text:astrophileeeeeeeeeeeeeeeeeeeeeeeeeeeeee(index:" + a + ")"
+                // }))
+
+                // doubt 
+
+            })
+
+            $('#rem').click(function () {
+
+                $('.div0').remove()
+                // $('.div0').detach()
+                
+
+            })
+
+            $('#emt').click(function(){
+                $('.div0').empty()
+            })
+
+
+
+            // add class
+
+            $('#b9').click(function () {
+
+                $('p,input,button').addClass("qwe")
+
+            })
+
+            $('#b10').click(function () {
+                //to store to this variable q
+                var q = "";
+                q += "width : " + $(".div4").width() + "<br>";
+                q += "height : " + $(".div4").height() + "<br>";
+                q += "innerwidth : " + $(".div4").innerWidth() + "<br>";
+                q += "innerheight : " + $(".div4").innerHeight() + "<br>";
+                $(".div4").html(q)
+            })
+
+            // call ..child-span...style set to parent-p....
+
+            // The parent() method returns the direct parent element of the selected element.
+
+            // The parents() method returns all ancestor elements of the selected element, all the way up to the document's root element (<html>).
+
+            
+            
+            $('span').parent().css({ 'background-color': 'orange', 'color': 'black' })
+
+            
+            
+//             call ..parent-div2...style set to children-p,b,h2,p....
+
+//             The children() method returns all direct children of the selected element.
+
+//             This method only traverses a single level down the DOM tree.
+
+
+
+            $('.div2').children().css({ 'background-color': 'blue', 'color': 'white','border':'red 1px solid' })
+
+            // The siblings() method returns all sibling elements of the selected element. 
+
+            $('h2').siblings().css({ 'background-color': 'pink', 'color': 'white' })
+
+            // $('div').first().css({ 'background-color': 'orange', 'color': 'red' })
+            // $('div').last().css({ 'background-color': 'red', 'color': 'white' })
+
+        })
+        
+
+//         $(document).ready(function(){
+
+//         $(document).ready(function(){
+
+//         })
+//   $(":input").css("background-color", "red");
+//     });
+
+    </script>
+
+</body>
+
+</html>
